@@ -8,7 +8,7 @@ class FileWriter
 
   def write_new_file
     if @braille_txt_file_name == "braille.txt"
-      @character_count = File.write(@braille_txt_file_name, "w")
+      @character_count = File.write(@braille_txt_file_name)
     end
   end
 
