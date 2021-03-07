@@ -6,7 +6,6 @@ class FileWriter
   def initialize(file_write)
     @file_write = file_write
     @translator = Translator.new
-
   end
 
   def write_new_file

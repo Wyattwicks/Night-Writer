@@ -26,5 +26,4 @@ end
 
 nightwriter = NightWriter.new(ARGV[0], ARGV[1])
 
-
   puts nightwriter.display_confirmation

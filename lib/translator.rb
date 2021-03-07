@@ -4,46 +4,36 @@ require './lib/filereader'
 class Translator
   include BrailleAlphabet
 
-  attr_reader :braille_message
+  attr_reader :braille_message, :file_read
 
   def initialize
-    @reader = FileReader.new('./data/message.txt').read
     @braille_message = ["", "", ""]
+    @file_read = file_read
   end
 
-  def translate_to_braille(string)
-    i = 0
-    string.each_char do |char|
-
-      add_row if i % 40 == 0 && i != 0
-
-
-        format_braille_character(BRAILLE_ALPHABET[char], i)
-
-        i += 1
+  def translate_to_braille(file_read)
+    character_count = 0
+    file_read.each_char do |char|
+      add_row if character_count % 40 == 0 && character_count != 0
+        format_braille_character(braille_alphabet[char], character_count)
+        character_count += 1
     end
     @braille_message
   end
 
   def format_braille_character(braille_character, character_position)
-
-    i = 0
-    until i > 2 do
-
-      @braille_message[determine_array_position(character_position) + i] << braille_character[i]
-      i += 1
+    line_position = 0
+    until line_position > 2 do
+      @braille_message[determine_array_position(character_position) + line_position] << braille_character[line_position]
+      line_position += 1
     end
   end
 
   def add_row
     @braille_message.push("", "", "")
-
   end
 
   def determine_array_position(character_position)
-
     (character_position / 40) * 3
   end
-
-
 end
