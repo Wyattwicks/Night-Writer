@@ -1,5 +1,5 @@
 module BrailleAlphabet
-  def braille_alphabet
+   BRAILLE_ALPHABET = 
     {
        "a" => ["0.", "..", ".."],
        "b" => ["0.", "0.", ".."],
@@ -29,5 +29,5 @@ module BrailleAlphabet
        "z" => ["0.", ".0", "00"],
        " " => ["..", "..", ".."]
     }
-  end
+
 end

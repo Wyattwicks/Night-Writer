@@ -1,15 +1,16 @@
-class FileWriter
-   attr_reader :braille_txt_file_name
+require './lib/translator'
 
-  def initialize
-    @braille_txt_file_name = ARGV[1]
-    @character_count = 0
+class FileWriter
+   attr_reader :file_write
+
+  def initialize(file_write)
+    @file_write = file_write
+    @translator = Translator.new
+
   end
 
   def write_new_file
-    if @braille_txt_file_name == "braille.txt"
-      @character_count = File.write(@braille_txt_file_name)
-    end
+     File.write(file_write)
   end
 
 end
