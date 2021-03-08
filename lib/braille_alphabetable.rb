@@ -31,5 +31,4 @@ module BrailleAlphabet
        "." => ["..", "00", ".0"]
     }
   end
-
 end

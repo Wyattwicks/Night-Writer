@@ -1,10 +1,10 @@
 require './lib/filewriter'
 require './lib/filereader'
-require './lib/translator'
+require './lib/englishtranslator'
 
-class NightWriter
+class NightReader
 
-  attr_reader :file_reader, :file_writer, :translator, :braille_translation, :characters
+  attr_reader :file_reader, :file_writer, :translator, :english_translation, :characters
 
   def initialize
     @file_reader = FileReader.new.read
@@ -16,19 +16,19 @@ class NightWriter
   end
 
 
-  def braille_translate
-    translator = Translator.new
-    @braille_translation = translator.translate_to_braille(@file_reader)
+  def english_translate
+    translator = EnglishTranslator.new
+    @english_translation = translator.translate_to_english(@file_reader)
   end
 
   def file_writer
-    file_writer = FileWriter.new(@braille_translation)
+    file_writer = FileWriter.new(@english_translation)
     file_writer.write_new_file
     file_writer.add_translation
   end
 end
 
-nightwriter = NightWriter.new
-nightwriter.braille_translate
+nightreader = NightReader.new
+nightwriter.english_translate
 nightwriter.file_writer
 puts nightwriter.display_confirmation

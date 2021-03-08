@@ -21,7 +21,6 @@ class FileWriter
   end
 
   def add_translation
-
     File.open(@file_writer, "a") do |f|
       f.write(@formatted_string)
     end

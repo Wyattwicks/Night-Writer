@@ -1,5 +1,4 @@
 require './lib/braille_alphabetable'
-
 class Translator
   include BrailleAlphabet
 
@@ -35,4 +34,5 @@ class Translator
   def determine_array_position(character_position)
     (character_position / 40) * 3
   end
+
 end
