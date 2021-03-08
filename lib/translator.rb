@@ -1,5 +1,5 @@
 require './lib/braille_alphabetable'
-require './lib/filereader'
+# require './lib/filereader'
 
 class Translator
   include BrailleAlphabet
