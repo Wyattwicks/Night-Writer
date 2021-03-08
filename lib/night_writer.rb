@@ -7,15 +7,10 @@ class NightWriter
   attr_reader :file_reader, :file_writer, :translator, :braille_translation
 
   def initialize
-
     @file_reader = FileReader.new.read
-
-
-
   end
 
   def display_confirmation
-
       puts "Created '#{ARGV[1]}' containing xxxxx characters."
   end
 
@@ -30,7 +25,6 @@ class NightWriter
     file_writer.write_new_file
     file_writer.add_translation
   end
-
 end
 
 nightwriter = NightWriter.new

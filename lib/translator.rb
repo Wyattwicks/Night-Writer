@@ -1,5 +1,4 @@
 require './lib/braille_alphabetable'
-# require './lib/filereader'
 
 class Translator
   include BrailleAlphabet
@@ -19,13 +18,11 @@ class Translator
         character_count += 1
     end
     @braille_message
-
   end
 
   def format_braille_character(braille_character, character_position)
     line_position = 0
     until line_position > 2 do
-      # require "pry";binding.pry
       @braille_message[determine_array_position(character_position) + line_position] << braille_character[line_position]
       line_position += 1
     end
