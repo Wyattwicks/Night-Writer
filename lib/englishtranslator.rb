@@ -9,6 +9,18 @@ class EnglishTranslator
     @english_message = [""]
   end
 
+  def format
+    lines = @file_reader.split("\n")
+    amount_of_lines = lines.length
+    
+    new_line = lines.map do |line|
+      line.slice!(0..1)
+    end
+    character = new_lines[0..2]
+
+    require "pry";binding.pry
+  end
+
 
 
   def translate_to_english(file)

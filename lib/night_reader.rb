@@ -18,7 +18,7 @@ class NightReader
 
   def english_translate
     translator = EnglishTranslator.new
-    @english_translation = translator.translate_to_english(@file_reader)
+    @english_translation = translator.format(@file_reader)
   end
 
   def file_writer
@@ -29,6 +29,6 @@ class NightReader
 end
 
 nightreader = NightReader.new
-nightwriter.english_translate
-nightwriter.file_writer
-puts nightwriter.display_confirmation
+# nightreader.english_translate
+# nightreader.file_writer
+puts nightreader.display_confirmation
