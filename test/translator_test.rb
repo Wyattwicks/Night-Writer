@@ -40,6 +40,4 @@ class TranslatorTest < Minitest::Test
     assert_equal answer_key, @translator.translate_to_braille(long_answer)
   end
 
-
-
 end

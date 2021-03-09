@@ -6,6 +6,5 @@ class FileWriterTest < Minitest::Test
     message = ["asdadaw", "asd", "aaa"]
     filewriter = FileWriter.new(message)
     assert_equal "asdadaw\nasd\naaa", filewriter.add_line_breaks
-
   end
 end
