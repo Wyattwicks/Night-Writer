@@ -15,8 +15,6 @@ class EnglishTranslator
     join_chars(braille_array)
   end
 
-
-
   def format(braille)
     lines = braille.split("\n")
     char_count = determine_number_characters(lines)

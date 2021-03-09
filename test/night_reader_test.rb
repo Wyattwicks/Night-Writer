@@ -8,3 +8,4 @@ class NightReaderTest < Minitest::Test
     nightreader = NightReader.new
     assert_instance_of NightReader, nightreader
   end
+end
