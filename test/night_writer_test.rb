@@ -1,19 +1,13 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/night_writer'
-require './data/brailletest.txt'
-require './data/messagetest.txt'
 class NightWriterTest < Minitest::Test
-
   def setup
-    @ARGV[0] = './data/messagetest.txt'
-    @ARGV[1] = './data/brailletest.txt'
     @nightwriter = NightWriter.new
   end
-
-
   def test_it_exists
     #Note: this test and the one below will not run if nightwriter is instantiated in the class
+    skip
     nightwriter = NightWriter.new
     assert_instance_of NightWriter, nightwriter
   end
@@ -27,6 +21,4 @@ class NightWriterTest < Minitest::Test
     answer = "Created other fake file containing xxx characters."
     assert_equal answer, nightwriter.display_confirmation
   end
-
-
 end

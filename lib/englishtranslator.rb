@@ -1,10 +1,8 @@
 require './lib/english_alphabetable'
 class EnglishTranslator
-
   include EnglishAlphabet
-
   attr_reader :file_read, :english_message
-
+  
   def initialize
     @english_message = ""
   end
