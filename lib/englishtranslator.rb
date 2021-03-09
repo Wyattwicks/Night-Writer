@@ -24,7 +24,6 @@ class EnglishTranslator
     row_count = 0
     index = 0
     until total_count == char_count do
-
       @english_message << lines[row_count][index..index + 1]
       @english_message << lines[row_count + 1][index..index + 1]
       @english_message << lines[row_count + 2][index..index + 1]
@@ -33,14 +32,12 @@ class EnglishTranslator
       total_count += 1
       row_count += 3 if (total_count % 40) == 0 && total_count != 0
     end
-
   end
 
   def determine_number_characters(lines)
     less_than_80_chars = lines.find_index do |line|
       line.length < 80
     end
-
     partial_lines = lines[less_than_80_chars + 1].length / 2
     (less_than_80_chars / 3) * 40 + partial_lines
   end
