@@ -15,7 +15,6 @@ class NightReader
       puts "Created '#{ARGV[1]}' containing #{characters} characters."
   end
 
-
   def english_translate
     translator = EnglishTranslator.new
     @english_translation = translator.call(@file_reader)
@@ -26,9 +25,13 @@ class NightReader
     file_writer.write_new_file
     file_writer.add_english_translation
   end
+
+  def start
+    self.english_translate
+    self.file_writer
+    self.display_confirmation
+  end
 end
 
 nightreader = NightReader.new
-nightreader.english_translate
-nightreader.file_writer
-puts nightreader.display_confirmation
+nightreader.start

@@ -15,7 +15,6 @@ class NightWriter
       puts "Created '#{ARGV[1]}' containing #{characters} characters."
   end
 
-
   def braille_translate
     translator = Translator.new
     @braille_translation = translator.translate_to_braille(@file_reader)
@@ -27,9 +26,13 @@ class NightWriter
     file_writer.write_new_file
     file_writer.add_translation
   end
+
+  def start
+    self.braille_translate
+    self.file_writer
+    self.display_confirmation
+  end
 end
 
 nightwriter = NightWriter.new
-nightwriter.braille_translate
-nightwriter.file_writer
-puts nightwriter.display_confirmation
+nightwriter.start
