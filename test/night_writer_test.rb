@@ -18,12 +18,5 @@ class NightWriterTest < Minitest::Test
     assert_equal answer, nightwriter.display_confirmation
   end
 
-  def test_braille_translate
-    nightwriter = NightWriter.new("fake file", "other fake file")
-    nightwriter.braille_translate
-    assert_equal "other fake file", @braille_translation
-  end
-
-
 
 end

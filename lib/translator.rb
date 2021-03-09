@@ -35,12 +35,4 @@ class Translator
     (character_position / 40) * 3
   end
 
-  def add_line_breaks
-    string_collection = ""
-    @braille_message.each do |line|
-      string_collection << (line + "\n")
-    end
-    @formatted_string = string_collection.chomp
-  end
-
 end
