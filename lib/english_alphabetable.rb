@@ -1,6 +1,6 @@
 module EnglishAlphabet
-   def english_alphabet
-    {
+      ENGLISH_ALPHABET =
+      {
        ["0.", "..", ".."] => "a",
        ["0.", "0.", ".."]=> "b",
        ["00", "..", ".."]=> "c",
@@ -30,5 +30,5 @@ module EnglishAlphabet
        ["..", "..", ".."]=> " ",
        ["..", "00", ".0"]=> "."
     }
-  end
+
 end

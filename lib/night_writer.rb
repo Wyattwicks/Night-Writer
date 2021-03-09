@@ -23,6 +23,7 @@ class NightWriter
 
   def file_writer
     file_writer = FileWriter.new(@braille_translation)
+      file_writer.add_line_breaks
     file_writer.write_new_file
     file_writer.add_translation
   end
