@@ -14,9 +14,17 @@ Night-Writer is a ruby project meant to translate a message in english character
 7. The first .txt file is the file the program will read, the 2nd .txt file is the name of the file you want to create, it can be named anything.
 8. Open the new files to view the translated message in braille or english. 
 
+## Images
+
+Message: 
+![Screen Shot 2021-07-09 at 3 35 24 PM](https://user-images.githubusercontent.com/74991865/125139090-221a5280-e0cd-11eb-92ee-0b2083aa6dc9.png)
+
+Braille:
+![Screen Shot 2021-07-09 at 3 50 25 PM](https://user-images.githubusercontent.com/74991865/125139252-6f96bf80-e0cd-11eb-9f4d-7d7cd6220fe9.png)
 
 ## Technologies
 - Ruby
 - RSpec
+
 ## Author
 * Wyatt Wicks [GitHub](https://github.com/Wyattwicks) | [LinkedIn](https://www.linkedin.com/in/wyattwicks/)
