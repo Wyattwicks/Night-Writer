@@ -9,7 +9,7 @@ class EnglishTranslator
 
   def call(braille)
     format(braille)
-     braille_array = create_braille_array(english_message)
+    braille_array = create_braille_array(english_message)
     join_chars(braille_array)
   end
 

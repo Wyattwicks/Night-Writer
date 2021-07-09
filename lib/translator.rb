@@ -1,11 +1,11 @@
 require './lib/braille_alphabetable'
 class Translator
-  include BrailleAlphabet
 
   attr_reader :braille_message, :file_read
 
   def initialize
     @braille_message = ["", "", ""]
+    @braille_alphabet = BrailleAlphabet.new
   end
 
   def translate_to_braille(file)
@@ -13,7 +13,7 @@ class Translator
     character_count = 0
     file_read.each_char do |char|
       add_row if character_count % 40 == 0 && character_count != 0
-        format_braille_character(braille_alphabet[char.downcase], character_count)
+        format_braille_character(@braille_alphabet.english_to_braille(char.downcase), character_count)
         character_count += 1
     end
     @braille_message

@@ -1,5 +1,7 @@
-module BrailleAlphabet
-   def braille_alphabet
+class BrailleAlphabet
+
+  def initialize
+   @braille_alphabet =
     {
        "a" => ["0.", "..", ".."],
        "b" => ["0.", "0.", ".."],
@@ -31,5 +33,9 @@ module BrailleAlphabet
        "." => ["..", "00", ".0"],
        "," => ["..", "0.", ".."]
     }
+  end
+
+  def english_to_braille(character)
+    @braille_alphabet[character]
   end
 end
